@@ -1,0 +1,183 @@
+@import url("../fonts/fira/fira.css");
+@import url("../fonts/Proxima-Nova/nova.css");
+
+.contact-container-padding{
+	padding-top: 0px !important;
+}
+
+.contact-header{
+	display: block;
+	background: #48cbe8;
+	border-bottom: 17px solid #67dffa;
+	color: #fff;
+	font-family: 'fira_sansbook';
+	font-size: 27px;
+	line-height: 20px;
+	padding-top:51px;
+	padding-bottom: 51px;
+	padding-left: 58px;
+	margin-bottom: 48px;
+}
+.contact-content-form{
+	width: 402px;
+	margin-left:123px;
+	padding-bottom: 196px;
+}
+.contact-info-container{
+	margin-bottom: 17px;
+	position: relative;
+}
+.contact-info-element{
+	width: 194px;
+	position: relative;
+}
+.contact-head-text{
+	display: block;
+	font-family: 'fira_sanslight';
+	font-size: 19px;
+	color: #959aa8;
+	line-height: 19px;
+	margin-bottom: 3px;
+}
+
+.contact-input{
+	width: 174px;
+	height: 37px;
+	border:1px solid #48cbe8;
+	outline: none;
+	border-radius: 3px;
+	padding-left: 9px;
+	padding-right: 9px;
+}
+
+.contact-input::placeholder{
+	color: #48cbe8;
+	font-size: 13px;
+	font-family: 'fira_sanslight';
+	opacity: 1;
+	transition: opacity 0.3s ease; 
+}
+
+.contact-input:focus::placeholder{
+	transition: opacity 0.3s ease;
+	opacity: 0;
+}
+.contact-info-textarea{
+	width: 100%;
+	margin-bottom: 11px;
+	position: relative;
+}
+.contact-msg{
+	resize: none;
+	width: 389px;
+	height: 171px;
+	padding-left: 9px;
+	padding-top: 9px;
+	border:1px solid #48cbe8;
+	outline: none;
+	border-radius: 3px;
+}
+
+.contact-msg::placeholder{
+	color: #48cbe8;
+	font-size: 13px;
+	font-family: 'fira_sanslight';
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.contact-msg:focus::placeholder{
+	transition: opacity 0.3s ease;
+	opacity:0;
+}
+
+.contact-captcha{
+	display: block;
+	height:77px;
+	width: 189px;
+	border:1px solid #48cbe8;
+	border-radius: 4px;
+	background:#fff;
+	float: left; 
+}
+
+.contact-captcha-code{
+	margin-top: 21px;
+	border:1px solid #48cbe8;
+	margin-left: 20px;
+	height: 28px;
+	float: right;
+	width: 180px;
+	border-radius: 4px;
+	outline: none;
+	padding-left: 9px;
+}
+
+
+.contact-captcha-code::placeholder{
+	color: #48cbe8;
+	font-size: 13px;
+	font-family: 'fira_sanslight';
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+.contact-captcha-code:focus::placeholder{
+	opacity:0;
+	transition: opacity 0.3s ease;
+}
+
+.contact-submit-button{
+	font-family: 'fira_sansbook';
+	font-size: 19px;
+	color: #fff;
+	background: #48cbe8;
+	border:none;
+	border-radius: 4px;
+	width: 137px;
+	height: 34px;
+	border-bottom: 3px solid #3ba8c0;
+	outline: none;
+	cursor: pointer;
+}
+/* Нижний отступ от блока  Капчи */
+.mbot{
+	margin-bottom:22px;
+}
+
+.contact-submit-button:active{
+	border-bottom: none;
+	border-top:3px solid #3ba8c0;
+}
+
+.contact-reset-button{
+	font-family: 'fira_sansbook';
+	font-size: 19px;
+	color: #fff;
+	background: #849db5;
+	border:none;
+	border-radius: 4px;
+	width: 123px;
+	height: 34px;
+	border-bottom: 3px solid #687b8f;
+	outline: none;
+	cursor: pointer;
+}
+
+/*==================QTIP POSItION ==========================*/
+
+.contact-info-element .top30{
+	position:absolute;
+	top: 30px;
+}
+
+
+.contact-info-element .right-qtip{
+	left:201px;
+}
+
+.right-qtip .right-arrow{
+	border-left: 10px solid transparent ;
+	border-right:10px solid rgb(249, 126, 118) ;
+	right:132px;
+}
