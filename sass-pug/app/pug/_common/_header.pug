@@ -1,0 +1,10 @@
+include _mixins
+header.header
+	.container
+		block logotype
+			+logo('colored')
+		.contacts
+			block telephone
+				+tel('gray')
+			a(href="mailto:manager@company.com").contact-mail
+				| manager@company.com

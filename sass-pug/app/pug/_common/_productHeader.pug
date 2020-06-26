@@ -1,0 +1,48 @@
+include _mixins
+header.header-line
+		.header-top
+			.container
+				.small-socials
+					a(href="vk.com" class="small-socials__link").small-socials__link_vk
+					a(href="fb.com" class="small-socials__link").small-socials__link_fb
+					a(href="tw.com" class="small-socials__link").small-socials__link_tw
+				.adress
+					img(src="../images/location.png", alt="").adress__marker
+					span.adress__title
+						| г. Москва, ул. Новая 246, офис 214
+					block telephone
+						+tel('white')
+		.header-bot
+			.container
+				block logotype
+					+logo('colored')
+				form.search
+					input(type="text" name="searchValue" placeholder="iMac 27 Дюймов").search__input_text
+					button(type="submit" name="searchSubmit").search__input_submit
+						| Поиск
+				ul.order-info
+					li.order-info__item
+						a(href="#" class="order-info__link").order-info__link_map
+							| Карта проезда
+					li.order-info__item
+						a(href="#" class="order-info__link").order-info__link_history
+							| История заказов
+					li(class="order-info__item_backet").order-info__item
+						a(href="" class="order-info__link").order-info__link_backet
+							| Корзина (3)
+						ul.order-info__backet
+							li.order-info-backet__item
+								a(href="").order-info-backet__link-wrap
+									img(class="order-info-backet__img_1" src="../images/iphone6_backet.png", alt="").order-info-backet__img
+									span(href="").order-info-backet__link
+										| iPhone 6
+							li.order-info-backet__item
+								a(href="").order-info-backet__link-wrap
+									img(class="order-info-backet__img_2" src="../images/ipadAir_backet.png", alt="").order-info-backet__img
+									span(href="").order-info-backet__link
+										| iPad Air Wi-Fi + Cellular 128GB - Silver
+							li.order-info-backet__item
+								a(href="").order-info-backet__link-wrap
+									img(class="order-info-backet__img_3" src="../images/macBook_backet.png", alt="").order-info-backet__img
+									span(href="").order-info-backet__link
+										| Macbook Air

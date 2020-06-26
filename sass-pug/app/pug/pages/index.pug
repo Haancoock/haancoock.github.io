@@ -1,0 +1,8 @@
+extends ../main.pug
+block title
+	title
+		| Apple Shop
+block popularProducts
+	+mainProducts(popularProducts, 'Популярные товары')
+block discountedProducts
+	+mainProducts(discountedProducts, 'Товары со скидкой')

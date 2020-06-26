@@ -1,0 +1,15 @@
+extends ../products_main
+
+block title
+	title
+		| Catalog
+block menu
+	+mainNavigation(navMenu, 2)
+block breadcrumbs
+	+breadcrumbs(productsCrumbs, 2)
+block productListIndex
+	+productListIndex(productsIndex, 1)
+block sidebarMenu
+	+sidebarMenu(navSidebar, 1)
+block productList
+	+prodList(pGrid, "Grid")

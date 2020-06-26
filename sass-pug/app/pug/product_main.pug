@@ -1,0 +1,25 @@
+include _common/_mixins
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="shortcut icon", type="image/gif" href="images/favicon.ico")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/libs.min.css")
+		block title
+	body
+		.wrapper
+			include _common/_upButton
+			.maincontent
+				include _common/_productHeader
+				block productMenu
+				.auxiliary-items
+					.container
+						block breadcrumbs
+				article.content
+					.container
+						block productSlider
+						block productInfo
+						include _common/_productStoreDescription
+				include _common/_footer

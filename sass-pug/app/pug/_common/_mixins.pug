@@ -1,0 +1,125 @@
+include _variables
+// navigation
+mixin mainNavigation(obj, count, style)
+	nav(class= style ? "main-navigation_" + style : '').main-navigation
+		.container
+			ul.main-navigation__list
+				-var n = 0
+				each val, index in obj
+					li(class= n++ == count - 1 ? 'main-navigation__item_active': '').main-navigation__item
+						a(href= index).main-navigation__link= val
+
+
+mixin breadcrumbs(obj, count)
+	.breadcrumbs
+		ul.breadcrumbs__list
+			-var n = 0
+			-var l = 0
+			each val, index in obj
+				li.breadcrumbs__item
+					a(
+						class=l++ == count - 1 ? '': 'breadcrumbs__link_active' 
+						class="breadcrumbs__link" 
+						href= n++ == count -1 ? null : index)= val
+
+mixin productListIndex(obj, count)
+	.list-index
+		ul.list-index__list
+			-var n = 0
+			-var l = 0
+			each val, index in obj
+				li.list-index__item
+					a(
+						href= n++ == count-1 ? null : index
+						class= l++ == count -1 ? 'list-index__link_active': ''
+						class="list-index__link")= val
+
+mixin sidebarMenu(obj, count)
+	nav.sidebar-navigation
+		ul.sidebar-navigation__list
+			-var n = 0
+			-var l = 0
+			each index in obj
+				li(class= n++ == count -1 ? 'sidebar-navigation__item_active': '').sidebar-navigation__item
+					span(class= l++ == count -1 ? 'sidebar-navigation__product-name_active': '').sidebar-navigation__proguct-name= index.name
+					-var sub = index.submenu
+					if sub
+						ul.sidebar-navigation-submenu__list
+							each subindex in sub
+								li.sidebar-navigation-submenu__item
+									a(href= subindex.url class="sidebar-navigation-submenu__link")= subindex.name
+
+mixin prodList(obj, style)
+	div(class="products"+ style)
+		-var n = 1
+			each index in obj
+				a(href="" class="product"+ style)
+					img(src= index.url class="product__image_"+ n++ class="product"+style+"__image")
+					div(class="product"+style+"__description")
+						span(class="product"+style+"__title")= index.title
+						div(class="product"+style+"__stats")
+							each stat in index.stats
+								div(class="product"+style+"__stats-line")
+									span(class="product"+style+"__stats-name")= (stat.name + " ")
+									
+									span(class="product"+style+"__stats-value")= (stat.value + "")
+
+mixin tel(style)
+	a(href="tel:+79213221232" class='tel__'+ style)
+		span.tel__code
+			| +7 (921)
+		| 322 12 32
+
+mixin logo(type)
+	a(href="index.html" class= type + "-logo")
+			img(src="images/logo_" + type + ".png", alt="logo" class= type + "-logo")
+
+mixin productSlider(img)
+	.product-slider
+		img(src="images/slider-img1.png").product-slider__image
+		.product-slider__list
+			div(class="product-slider-button__left").product-slider__button
+				| <
+			.product-slider-image__wrapper
+				each value in img
+					img(src= value).product-slider__item
+			div(class="product-slider-button__right").product-slider__button
+				| >
+
+mixin productInfo(obj, id)
+	.product-info
+		- var list = pList
+		- var stats = list[id].stats
+			h2.product-info__name= pList[id].title
+			.product-info__description
+				.product-info__stats
+					each stat in stats
+						.product-info__stats-wrapper
+							span.product-info__stats-name= stat.name
+							span.product-info__stats-value= stat.value
+					each stat in stats
+						.product-info__stats-wrapper
+							span.product-info__stats-name= stat.name
+							span.product-info__stats-value= stat.value
+
+mixin gallery(obj)
+	.gallery
+		ul.gallery__list
+			each item in obj
+				li.gallery__item
+					img(src= item).gallery__img
+
+mixin mainProducts(obj, title)
+	.main-products
+		h2.main-products__block-title= title
+		ul.main-products__list
+			each index in obj
+				li.main-products__item
+					.main-products__title-wrapper
+						img(src= index.img).main-products__img
+						a(href="").main-products__title=index.name
+					.main-products__stats-wrapper
+						each stat in index.stats
+							.main-products__stats
+								span.main-products__stats-name= stat.name
+								span.main-products__stats-value= stat.value
