@@ -1,0 +1,95 @@
+@import url('../fonts/digital-7/fonts.css');
+
+
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-color: #0080ff;
+}
+
+
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.main{
+	padding-top: 150px;
+	padding-left: 150px;
+}
+
+.calc-wrapper{
+	width: 450px;
+}
+.calculator{
+	background-color: #F3F2F3;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.calc-display-wrapper{
+	margin-bottom: 50px;
+}
+
+.calc-display{
+	width: 100%;
+	height: 70px;
+	background-color:black;
+	outline: none;
+	border:none;
+	border-radius: 5px;
+	color: white;
+	text-align: right;
+	padding: 0 10px;
+	box-sizing: border-box;
+	font-size: 50px;
+	font-family: 'digital7';
+	cursor: default;
+
+}
+
+.calc-table{
+	width: 100%;
+	border-spacing: 0;
+}
+
+.calc-button-row{
+}
+.calc-button{
+	width: 80px;
+	height: 50px;
+	text-align: center;
+	border:2px solid #eaeaea;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+	outline: none;
+	text-transform: uppercase;
+	color: #666666;
+	font-size: 27px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.calc-button:hover{
+	background: red;
+	color: #fff;
+	border:2px solid red;
+}
+
+
+.calc-button-row>td:last-child{
+	text-align: right;
+}
+
+
+.btn-equal{
+	height: 113px;
+}
+
+.btn-zero{
+	width: 191px;
+}

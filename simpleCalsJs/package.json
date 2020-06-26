@@ -1,0 +1,14 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "simpleCalc",
+  "main": "index.html",
+  "repository": "https://github.com/Haancoock/simpleCalcJs.git",
+  "author": "Alim <Haancoock123@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1"
+  }
+}
