@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>friendsFilter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="logo">
+
+</div>
+<div class="friends-filter">
+    <div class="friends-filter__header">
+        <p class="friends-filter__title">Выберите друзей</p>
+        <button class="friends-filter__close"></button>
+    </div>
+    <div class="friends-filter__friends friends-filter__friends--all">
+        <input type="text" name="search" class="friends-filter__search friends-filter__search--all" placeholder="Начните вводить имя друга">
+        <div class="friends-filter__list">
+            <p class="friends-filter__list-title">Ваши друзья</p>
+            <ul class="friends-filter__items friends-filter__items--all"></ul>
+        </div>
+    </div>
+    <div class="friends-filter__friends friends-filter__friends--selected">
+        <input type="text" name="search" class="friends-filter__search friends-filter__search--selected" placeholder="Начните вводить имя друга">
+        <div class="friends-filter__list">
+            <p class="friends-filter__list-title">Друзья в списке</p>
+            <ul class="friends-filter__items friends-filter__items--selected"></ul>
+        </div>
+    </div>
+    <button class="friends-filter__save">Сохранить</button>
+</div>
+<div class="friends-filter__overlay"></div>
+<template id="friend-template">
+    <li class="friends-filter__item">
+        <img src="" width="45" height="45" alt="Аватарка" class="friends-filter__avatar">
+        <span class="friends-filter__name"></span>
+        <span class="friends-filter__surname"></span>
+        <button class="friends-filter__btn"></button>
+    </li>
+</template>
+<script src="js/script.js"></script>
+</body>
+</html>
